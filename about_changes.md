@@ -21,11 +21,3 @@ As a result, any Linux user who:
 - Keeps server verification with `altsubject-matches` enabled  
 
 will hit an authentication loop: the system keeps rejecting ULPGC’s own server certificate because of this mismatch between the certificate and the generated profile.
-
-A quick *diagnostic* workaround is to disable certificate verification entirely (removing the CA or `altsubject-matches`), which makes the connection work immediately. This confirms that the problem is not the credentials or the OS, but the certificate validation policy. However, this workaround is insecure and should **not** be recommended.
-
-Temporary diagnostic commands:
-
-```bash
-sudo nmcli connection modify eduroam 802-1x.ca-cert "" 802-1x.altsubject-matches ""
-nmcli --ask connection up eduroam
