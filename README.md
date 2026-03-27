@@ -56,7 +56,7 @@ From the repository page, download `eduroam-fixer.sh` (or clone the repo):
 ```bash
 git clone https://github.com/Lainer2/ULPGC-EDUROAM-FIX-For-Linux-.git
 cd ULPGC-EDUROAM-FIX-For-Linux-
-chmod +x eduroam-fixer.sh
+chmod +x lainers_eduroam_fixer.sh
 ```
 
 (If you named the script differently, adjust the filename.)
